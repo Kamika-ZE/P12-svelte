@@ -1,0 +1,32 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.card-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.card-connexion {
+    width: 100%;
+    max-width: 400px;
+}
+
+.nav-item .nav-link {
+    color:#212529;
+}
+.nav-item .nav-link.active {
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529
+}
+
+.list-group .list-group-item {
+    border: none;
+}
