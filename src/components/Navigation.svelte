@@ -4,13 +4,8 @@
       Navbar,
       NavbarToggler,
       NavbarBrand, 
-      Form,
-      Input,
-      Icon,
       Button,
-      Image,
-      FormGroup,
-      Label
+      Image
     } from 'sveltestrap';
 
     let isOpen = false;
@@ -20,6 +15,8 @@
     function handleUpdate(event) {
       isOpen = event.detail.isOpen;
     }
+
+    import { Link } from "svelte-routing";
   </script>
   
   <Navbar fluid color="light" light expand="lg" class="justify-content-between">
@@ -37,8 +34,12 @@
           </div>
         {:else} 
           <div class="d-grid gap-2 d-flex justify-content-lg-end justify-content-center">
-            <Button color="dark" onclick="location.href='login.html'">Se connecter</Button>
-            <Button outline color="dark" onclick="location.href='register.html'">S'enregistrer</Button>
+            <Link to="login">
+              <Button color="dark">Se connecter</Button>
+            </Link>
+            <Link to="register">
+              <Button outline color="dark">S'enregistrer</Button>
+            </Link>
           </div>
         {/if}  
       </div>
