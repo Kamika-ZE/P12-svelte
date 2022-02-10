@@ -1,10 +1,9 @@
 <script>
-	import Index from "./routes/index.svelte";
-	import Header from '../components/Header.svelte';
-	import Main from '../components/Main.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Header from './components/Header.svelte';
+	import Footer from './components/Footer.svelte';
+	import Main from './components/Main.svelte';
 
-	import { Router, Link, Route } from "svelte-routing";
+	import { Router } from 'svelte-routing';
 	
 	export let url = "";
 </script>
@@ -18,16 +17,7 @@
 	<Header/>
 	<Main/>
 	<Footer/>
-
-	<div>
-	  <Route path="blog/:id" component="{BlogPost}" />
-	  <Route path="blog" component="{Blog}" />
-	  <Route path="about" component="{About}" />
-	  <Route path="/"><Home /></Route>
-	</div>
-  </Router>
-<Index/>
-
+</Router>
 
 <style>
 
